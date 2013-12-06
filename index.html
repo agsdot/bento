@@ -6,14 +6,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Bento - Learn how to code</title>
+        <title>Bento - Learn to code</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta property="fb:admins" content="1031670302" />
         <meta name="pocket-site-verification" content="87443ab7c05b21e6b28ca571bc0e11" />
         <meta property="og:image" content="http://www.bentobox.io/images/logo.png"/>
-        <meta property="og:title" content="Bento - Learn how to code"/>
+        <meta property="og:title" content="Bento - Learn to code"/>
         <meta property="og:url" content="http://www.bentobox.io/"/>
-        <meta property="og:site_name" content="Bento - Learn how to code"/>
+        <meta property="og:site_name" content="Bento - Learn to code"/>
         <meta property="og:description" content="Everything you need to know about web development. Neatly packaged. Learn HTML, CSS, Javascript, Python, Rails, Node, and more! Made with love in NYC by @jonhmchan.">
         <meta property="og:type" content="website"/>
         <meta name="description" content="Everything you need to know about web development. Neatly packaged. Learn HTML, CSS, Javascript, Python, Rails, Node, and more! Made with love in NYC by @jonhmchan.">
@@ -47,6 +47,11 @@
             </div>
             <div id="donate">
                 <h2>Find this useful? Give back and <a target="_self" href="#" ng-click="fire_sponsorship()">become a sponsor</a> for just $1!</h2>
+            </div>
+            <div id="toolbar" ng-show="current_box != null">
+                <div class="row-fluid">
+                    <a ng-click="toggleInactiveBoxes()" href="#{{ current_box }}">{{ toggleAction() }} inactive boxes</a> | <a ng-click="current_box = null" href="#{{ current_box }}">Close active box</a>
+                </div>
             </div>
             <div id="modal" ng-show="more_index != null">
                 <h2>{{ boxes[more_index].name  }}</h2>
@@ -117,7 +122,7 @@
                             </div>
                         </div>
                      </div>
-                     <div class="row-fluid">
+                     <div class="row-fluid" ng-show="false">
                          <div class="span8 offset2" id="donate_container">
                             <div id="donate_progress" style="width: {{ donate_progress }}%;">
                                 <div id="donate_progress_number">{{ donate_progress }}%</div>
@@ -127,8 +132,8 @@
                      </div>
                 </header>
                 <div id="box_container" class="container-fluid">
-                    <div class="span3 box_container" ng-repeat="($index, box) in boxes">
-                        <div id="{{ box.name }}" class="box highlight-{{ in_next_boxes(box.name) }}" ng-click="set_next_boxes(box, $index)">
+                    <div class="span3 box_container hidden-{{ in_next_boxes(box.name) }}-{{ !showInactiveBoxes }}" ng-repeat="($index, box) in boxes">
+                        <div id="{{ box.name }}" class="box highlight-{{ in_next_boxes(box.name) }} hidden-{{ in_next_boxes(box.name) }}-{{ !showInactiveBoxes }}" ng-click="set_next_boxes(box, $index)">
                             <a name="{{ box.name }}"></a>
                             <a target="_blank" class="title" name="{{ box.name }}" href="{{ box.home }}">{{ box.name }}</a>                        
                             <p>{{ box.description }}</p>

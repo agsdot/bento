@@ -123,11 +123,6 @@
         "name": "tuts+",
         "level": 0,
         "url": "https://tutsplus.com/lesson/hello-2/"
-      },
-      {
-        "name": "Sublime Text Tips",
-        "level": 0,
-        "url": "http://sublimetexttips.com/"
       }
     ]
   },
@@ -241,7 +236,7 @@
   {
     "name": "jquery",
     "description": "Control the DOM with javascript",
-    "$then": ["python", "ruby", "node", "angular", "backbone", "ember", "sugar", "coffeescript", "flight", "dart"],
+    "$then": ["python", "ruby", "node", "angular", "backbone", "ember", "sugar", "coffeescript", "flight", "dart", "d3"],
     "home": "http://jquery.com/",
     "links": [
       {
@@ -408,6 +403,24 @@
     ]
   },
   {
+    "name": "d3",
+    "description": "A javascript library for visualizing data",
+    "$then": ["angular", "backbone"],
+    "home": "http://d3js.org/",
+    "links": [
+      {
+        "name": "Codecademy",
+        "level": 0,
+        "url": "http://www.codecademy.com/courses/web-beginner-en-kcP9b/0/1"
+      },
+      {
+        "name": "alignedleft",
+        "level": 0,
+        "url": "http://alignedleft.com/tutorials/d3/"
+      }
+    ]
+  },
+  {
     "name": "vim",
     "description": "A text editor in your console",
     "$then": ["vim"],
@@ -454,7 +467,7 @@
       {
         "name": "Designing HTTP Interfaces and RESTful Web Services",
         "level": 1,
-        "url": "http://munich2012.drupal.org/program/sessions/designing-http-interfaces-and-restful-web-services.html"
+        "url": "http://www.youtube.com/watch?v=zEyg0TnieLg"
       },
       {
         "name": "White House Web API Standards",
@@ -483,6 +496,11 @@
         "name": "Documentation",
         "level": 0,
         "url": "http://flask.pocoo.org/docs/"
+      },
+      {
+        "name": "Flaskr: Intro to Flask and Test Driven Development",
+        "level": 0,
+        "url": "https://github.com/mjhea0/flaskr-tdd"
       }
     ]
   },
@@ -518,7 +536,7 @@
       {
         "name": "Setting up a Django Project from Scratch",
         "level": 0,
-        "url": "http://realdjango.herokuapp.com/"
+        "url": "http://realdjango.com/"
       }
     ]
   },
@@ -704,6 +722,11 @@
         "url": "http://www.codeschool.com/courses/try-ios"
       },
       {
+        "name": "X-Code Cheat Sheet",
+        "level": 0,
+        "url": "http://www.git-tower.com/blog/xcode-cheat-sheet-detail/"
+      },
+      {
         "name": "Code Coalition iOS Bootcamp",
         "level": 1,
         "url": "https://www.codecoalition.com/courses/CodeCoalition/iOS101/2013_fall/about"
@@ -733,6 +756,29 @@
         "name": "Windows App Builder",
         "level": 0,
         "url": "https://build.windowsstore.com/#fbid=9lOGdzuGAkZ"
+      }
+    ]
+  },
+  {
+    "name": "windows",
+    "description": "A full toolkit of resources from Microsoft",
+    "home": "http://developers.microsoft.com/",
+    "$then": [],
+    "links": [
+      {
+        "name": "Hackathon Guide to Windows 8",
+        "level": 0,
+        "url": "http://marianaggaga.azurewebsites.net/?p=5651"
+      },
+      {
+        "name": "Dev Center",
+        "level": 0,
+        "url": "http://www.bing.com/dev/en-us/dev-center"
+      },
+      {
+        "name": "Windows App Starter Kits",
+        "level": 0,
+        "url": "https://github.com/winappkits"
       }
     ]
   },
@@ -1525,6 +1571,11 @@
     "$then": [],
     "links":[
       {
+        "name": "Google's Starter Guide",
+        "level": 0,
+        "url": "https://static.googleusercontent.com/external_content/untrusted_dlcp/www.google.com/en//webmasters/docs/search-engine-optimization-starter-guide.pdf"
+      },
+      {
         "name": "The Advanced Guide to SEO",
         "level": 0,
         "url": "http://www.quicksprout.com/the-advanced-guide-to-seo/"
@@ -1578,6 +1629,19 @@
     ]
   },
   {
+    "name": "google",
+    "description": "An enormous collection of apis from Google",
+    "home": "http://developers.google.com",
+    "$then": [],
+    "links": [
+      {
+        "name": "Google API Explorer",
+        "level": 0,
+        "url": "https://developers.google.com/apis-explorer/#p/"
+      }
+    ]
+  },
+  {
     "name": "mashape",
     "description": "An easy way to distribute, monetize and consume multiple APIs",
     "home": "",
@@ -1622,6 +1686,37 @@
     ]
   },
   {
+    "name": "sendgrid",
+    "description": "An email API",
+    "home": "http://sendgrid.com",
+    "$then": [],
+    "links":[
+      {
+        "name": "Hackathon",
+        "level": 0,
+        "url": "http://hack.sendgrid.com"
+      },
+      {
+        "name": "Docs",
+        "level": 0,
+        "url": "http://docs.sendgrid.com"
+      }
+    ]
+  },
+  {
+    "name": "semantria",
+    "description": "A text and sentiment analysis API",
+    "home": "http://semantria.com",
+    "$then": [],
+    "links":[
+      {
+        "name": "Developer Portal",
+        "level": 0,
+        "url": "https://semantria.com/developer"
+      }
+    ]
+  },
+  {
     "name": "twilio",
     "description": "Send and receive texts and calls",
     "home": "http://twilio.com/",
@@ -1661,15 +1756,48 @@
     ]
   },
   {
-    "name": "alchemy",
-    "description": "A natural language processing service",
+    "name": "alchemyapi",
+    "description": "A NLP text analysis API to extract meaning from your blogs, tweets, reviews and news articles",
     "home": "http://www.alchemyapi.com/",
     "$then": ["facebook", "foursquare", "twilio"],
     "links":[
       {
-        "name": "Demo",
+        "name": "Getting started guide",
+        "level": 0,
+        "url": "http://www.alchemyapi.com/developers/getting-started-guide/"
+      },
+      {
+        "name": "Interactive web demo",
         "level": 0,
         "url": "http://www.alchemyapi.com/products/demo/"
+      },
+  	  {
+        "name": "Get a free API key",
+  		  "level": 1,
+  		  "url": "http://www.alchemyapi.com/api/register.html"
+  	  },
+      {
+        "name": "Docs",
+        "level": 1,
+        "url": "http://www.alchemyapi.com/api/"
+      },
+      {
+        "name": "SDKs",
+        "level": 1,
+        "url": "http://www.alchemyapi.com/developers/sdks/"
+      }
+    ]
+  },
+  {
+    "name": "lob",
+    "description": "A printing API",
+    "home": "http://lob.com",
+    "$then": [],
+    "links": [
+      {
+        "name": "Docs",
+        "level": 0,
+        "url": "https://www.lob.com/docs"
       }
     ]
   },
